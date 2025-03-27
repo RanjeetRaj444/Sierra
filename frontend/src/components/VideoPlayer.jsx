@@ -25,8 +25,14 @@ const VideoPlayer = ({ video, onDelete }) => {
 
 	return (
 		<div className="bg-white shadow-lg rounded-lg p-6 w-full max-w-xl mx-auto">
-			<video className="w-full rounded-lg border border-gray-300 shadow-sm" controls>
-				<source src={`http://localhost:5000/${video.fileUrl}`} type="video/mp4" />
+			<video
+				className="w-full rounded-lg border border-gray-300 shadow-sm h-40"
+				controls
+			>
+				<source
+					src={`http://localhost:5000/${video.fileUrl}`}
+					type="video/mp4"
+				/>
 			</video>
 
 			{editing ? (

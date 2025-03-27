@@ -1,7 +1,7 @@
 import { useState } from "react";
 import axios from "axios";
 
-const VideoUpload = ({ onUpload }) => {
+const VideoUpload = ({ onUpload, setIsOpen }) => {
 	const [file, setFile] = useState(null);
 	const [form, setForm] = useState({ title: "", description: "", tags: "" });
 
@@ -18,6 +18,7 @@ const VideoUpload = ({ onUpload }) => {
 		});
 
 		onUpload();
+		setIsOpen(false);
 	};
 
 	return (

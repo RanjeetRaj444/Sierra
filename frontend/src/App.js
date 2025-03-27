@@ -5,6 +5,7 @@ import Login from "./pages/Login";
 import Dashboard from "./pages/Dashboard";
 import Navbar from "./components/Navbar";
 import VideoUpload from "./components/VideoUpload";
+import Modal from "./components/Modal";
 
 function App() {
 	return (

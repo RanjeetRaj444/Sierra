@@ -76,6 +76,7 @@ import VideoPlayer from "../components/VideoPlayer";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
 import { PiListPlusBold } from "react-icons/pi";
+import Modal from "../components/Modal";
 
 const Dashboard = () => {
 	const [videos, setVideos] = useState([]);
@@ -124,9 +125,10 @@ const Dashboard = () => {
 						))}
 					</div>
 					<div className="upload-section text-purple-700 flex gap-4">
-						<Link to={"/uploadFile"}>
+						<Modal onUpload={fetchVideos}/>
+						{/* <Link to={"/uploadFile"}>
 							<LiaFileUploadSolid />
-						</Link>
+						</Link> */}
 						<PiListPlusBold />
 					</div>
 				</div>
