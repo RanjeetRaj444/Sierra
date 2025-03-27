@@ -13,7 +13,7 @@ const VideoUpload = ({ onUpload, setIsOpen }) => {
 		formData.append("description", form.description);
 		formData.append("tags", form.tags);
 
-		await axios.post("http://localhost:5000/api/videos/upload", formData, {
+		await axios.post("https://sierra-8kcj.onrender.com/api/videos/upload", formData, {
 			headers: { Authorization: localStorage.getItem("token") },
 		});
 

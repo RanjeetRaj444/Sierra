@@ -7,7 +7,7 @@ const VideoList = () => {
 
 	useEffect(() => {
 		const fetchVideos = async () => {
-			const res = await axios.get("http://localhost:5000/api/videos", {
+			const res = await axios.get("https://sierra-8kcj.onrender.com/api/videos", {
 				headers: { Authorization: localStorage.getItem("token") },
 			});
 			setVideos(res.data);

@@ -10,7 +10,7 @@ const Register = () => {
 	const handleSubmit = async (e) => {
 		e.preventDefault();
 		try {
-			await axios.post("http://localhost:5000/api/auth/register", form);
+			await axios.post("https://sierra-8kcj.onrender.com/api/auth/register", form);
 			navigate("/login");
 		} catch (err) {
 			setError("Registration failed. Try a different username.");

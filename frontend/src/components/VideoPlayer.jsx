@@ -9,14 +9,14 @@ const VideoPlayer = ({ video, onDelete }) => {
 	});
 
 	const handleDelete = async () => {
-		await axios.delete(`http://localhost:5000/api/videos/${video._id}`, {
+		await axios.delete(`https://sierra-8kcj.onrender.com/api/videos/${video._id}`, {
 			headers: { Authorization: localStorage.getItem("token") },
 		});
 		onDelete();
 	};
 
 	const handleUpdate = async () => {
-		await axios.patch(`http://localhost:5000/api/videos/${video._id}`, form, {
+		await axios.patch(`https://sierra-8kcj.onrender.com/api/videos/${video._id}`, form, {
 			headers: { Authorization: localStorage.getItem("token") },
 		});
 		setEditing(false);
@@ -30,7 +30,7 @@ const VideoPlayer = ({ video, onDelete }) => {
 				controls
 			>
 				<source
-					src={`http://localhost:5000/${video.fileUrl}`}
+					src={`https://sierra-8kcj.onrender.com/${video.fileUrl}`}
 					type="video/mp4"
 				/>
 			</video>
